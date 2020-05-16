@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+<head>
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<br><br>
+<div class="row justify-content-center">
+  <div class="col-sm-12 text-left bg-white rounded shadow py-25">
+      <div class="p-3 mb-2 bg-success text-white">
+          <h5>Add Test</h5>
+      </div>
+      <div class="row">
+          <div class="col-sm-12">
+              <div class="card">
+                <form (ngSubmit)="onSubmit()" #addTest="ngForm">
+                    <div class="form-group">
+                      <label for="testId">Test Id</label>
+                      <input type="text" [(ngModel)]="test.testId" 
+                        class="form-control"
+                        id="testId"
+                        name="testId"
+                        placeholder="Enter the Id"
+                        required #testId="ngModel">
+                    </div>
+            <div class="form-group">
+                        <label for="testName">Test Name</label>
+                        <input type="text" [(ngModel)]="test.testName" 
+                          class="form-control"
+                          id="testName"
+                          name="testName"
+                          placeholder="Enter the name"
+                          required #testName="ngModel">
+            </div>
+            <div class="form-group">
+                <label for="testPrice">Test Price</label>
+                <input type="text" [(ngModel)]="test.testPrice" 
+                  class="form-control"
+                  id="testPrice"
+                  name="testPrice"
+                  placeholder="Enter the price"
+                  required #testPrice="ngModel">
+    </div>
+    <div class="form-group">
+        <label for="diagnosticCentre">Diagnostic Centre</label>
+        <input type="text" [(ngModel)]="test.diagnosticCentre" 
+          class="form-control"
+          id="diagnosticCentre"
+          name="diagnosticCentre"
+          placeholder="Enter the Diagnostic Centre"
+          required #diagnosticCentre="ngModel">
+</div>
+            <button type="submit"
+          class="btn btn-info">Submit</button>
+                </form>
+        </div>
+    </div>
+          
+          <router-outlet></router-outlet>	
+

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+<head>
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<div class="row justify-content-center">
+  <div class="col-sm-12 text-left bg-white rounded shadow py-13">
+      <div class="p-3 mb-2 bg-success text-white">
+          <h1>Welcome, Admin</h1>
+      </div>
+      <div class="row">
+          <div class="col-sm-6">
+              <div class="card">
+                  <div class="card-body">
+                      <h3 class="card-title">Add Test</h3>
+                      <p class="card-text">Here Admin Can add the Test into Database.</p>
+                      <a routerLink="/add-test" routerLinkActive="active-link">Click to add</a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-sm-6">
+              <div class="card">
+                  <div class="card-body">
+                      <h3 class="card-title">Remove Test</h3>
+                      <p class="card-text">Here Admin can remove the Test from the Database.</p>
+                      <a routerLink="/remove-test" routerLinkActive="active-link">Click to remove</a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-sm-6">
+              <div class="card">
+                  <div class="card-body">
+                    <h3 class="card-title">Test List</h3>
+                    <p class="card-text">Here Customer can check for test as per their requirements.</p>
+                    <a routerLink="/view-test" class="btn btn-info">Click to view</a>
+                  </div>
+              </div>
+          </div>
+          
+<router-outlet></router-outlet>	
